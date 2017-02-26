@@ -18,24 +18,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Forms</title>
-  <style>
-  p {
-    color: red;
-  }
-  h1 {
-    color:blue;
-  }
-  </style>
-</head>
+
 
 <body>
-<?php include('../app/views/header.php'); ?>
+<?php include('../../app/views/header.php'); ?>
 
-<form class="" action="email_data.php" method="post">
+<form class="" action="content.php" method="post">
   <label for="date"> Todays Date </label><br>
   <input type="text" name="date" value="">
   <hr>
