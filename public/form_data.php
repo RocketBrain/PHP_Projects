@@ -1,7 +1,5 @@
 <?php
 //global variables
-
-
 // checks to make sure the data was submitted
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
@@ -16,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 ?>
 
 <form class="form-style-3" action="content.php" method="post">
-  <label for="date"> Todays Date </label><br>
+  <label for="date"> Today's Date </label><br>
   <input type="text" name="date" value="">
   <hr>
   <br>
@@ -31,7 +29,5 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 <input type="submit" value="submit">
 </form>
-
-
 
 </html>
