@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 <?php include('../app/views/header.php'); ?>
 
 <form class="" action="email_data.php" method="post">
-  <label for="date"> Todays Date </label><br>
+  <label for="date"> Today's Date </label><br>
   <input type="text" name="date" value="">
   <hr>
   <br>

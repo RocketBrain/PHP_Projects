@@ -2,7 +2,6 @@
 //global variables
 
 
-
 // checks to make sure the data was submitted
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
@@ -14,28 +13,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
   echo "<p>E-mail: $email</p>";
   echo "<p>Description: $description</p>";
 }
-
-
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Forms</title>
-  <style>
-  p {
-    color: red;
-  }
-  h1 {
-    color:blue;
-  }
-  </style>
-</head>
-
-<body>
-<?php include('../app/views/header.php'); ?>
-
-<form class="" action="email_data.php" method="post">
+<form class="form-style-3" action="content.php" method="post">
   <label for="date"> Todays Date </label><br>
   <input type="text" name="date" value="">
   <hr>
@@ -51,7 +31,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 <input type="submit" value="submit">
 </form>
-</body>
 
 
 

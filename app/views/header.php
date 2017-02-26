@@ -2,13 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="../../css/main.css">
   <title>Forms</title>
-  <style>
-  p {
-    color: red;
-  }
-  h1 {
-    color:blue;
-  }
-  </style>
 </head>
