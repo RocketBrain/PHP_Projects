@@ -1,15 +1,39 @@
 <?php
-//global variables
-// checks to make sure the data was submitted
+function validate_date($date_string){
+  if($time = strtotime($date_string)){
+    return date('m/d/y', $time);
+  }
+else {
+return $date_string . 'Is not Valid. Please put in the date in mm/dd/yyyy format.';
+}
+
+
+}
+
+
+
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
+//remove whitespace with trim
+  $date =  trim($_POST['date']);
+  $email =  trim($_POST['email']);
+  $description =  trim($_POST['desc']);
 
-  $date =  $_POST['date'];
-  $email =  $_POST['email'];
-  $description =  $_POST['desc'];
 
-  echo "<p>Date: $date</p>";
-  echo "<p>E-mail: $email</p>";
-  echo "<p>Description: $description</p>";
+
+//verify data is not empty
+  if(!empty($date) && !empty($email) && !empty($description)){  //filter out extraneous user input with htmlspecialchars
+
+    //uses validate_date function to verify date is valid.
+    echo validate_date($date);
+
+  if (filter_var($email, FILTER_VALIDATE_EMAIL)){
+    echo '<p> E-mail: ' . htmlspecialchars($email) . '</p>';
+  }
+  else {
+    echo "<p>Please put in a proper e-mail address.</p>";
+  }
+    echo '<p> Description: ' . htmlspecialchars($description) . '</p>';
+  }
 }
 ?>
 
