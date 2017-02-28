@@ -7,17 +7,19 @@ use Respect\Validation\Validator;
 $v = new Validator;
 // var_dump($v);
 
-function validate_date($date_string){
 
+function validate_date($date_string){
+$date_validator = Validator::date()->notEmpty();
 //:: allows you to access classes methods and properties without new object. This is a static call.
 //after accesing the notEmpty() method, another method called validate is used on the parameter.
 //validate tests our data against the notEmpty() method.
 //we can chain together methods using -> to make the conditional more manageable.
-  if(Validator::notEmpty()->validate($date_string)){
-    return date('m/d/y', $date_string);
+  if($date_validator->validate($date_string)){
+    $date_time = strtotime($date_string);
+    return date('F jS Y', $date_time);
   }
 else {
-return $date_string . 'Is not Valid. Please put in the date in mm/dd/yyyy format.';
+return $date_string . ' Is not Valid. Please put in the date in mm/dd/yyyy format.';
 }
 }
 ?>
