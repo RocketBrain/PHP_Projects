@@ -37,7 +37,6 @@ echo "<br>";
 
 //counts the amount of arrays inside of $parts
 echo count($parts);
-echo "<br>";
 
 
 //example of using an array inside of the html itself.
