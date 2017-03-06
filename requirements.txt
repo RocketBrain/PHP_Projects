@@ -1,0 +1,9 @@
+Simple PHP7 Docker & Compose Environment
+
+Docker 1.12.5
+docker-machine 0.8.2
+docker-compose 1.9.0
+Nginx
+MySQL
+VirtualBox 5.1.10
+
